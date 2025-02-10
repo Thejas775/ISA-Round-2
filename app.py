@@ -271,7 +271,7 @@ def show_landing_page():
         st.session_state.game_started = True
         st.session_state.game_active = True
         st.session_state.start_time = datetime.now()
-        st.session_state.end_time = st.session_state.start_time + timedelta(seconds=300)
+        st.session_state.end_time = st.session_state.start_time + timedelta(seconds=200)
         st.session_state.current_problem = random.choice(list(PROBLEMS.keys()))
         st.session_state.messages = []
         st.session_state.try_count = 0
@@ -356,7 +356,7 @@ def show_game_interface():
                 if st.button("Try Another Challenge", key="new_challenge"):
                     st.session_state.game_active = True
                     st.session_state.start_time = datetime.now()
-                    st.session_state.end_time = st.session_state.start_time + timedelta(seconds=300)
+                    st.session_state.end_time = st.session_state.start_time + timedelta(seconds=200)
                     st.session_state.current_problem = random.choice(list(PROBLEMS.keys()))
                     st.session_state.messages = []
                     st.session_state.try_count = 0
